@@ -1,8 +1,8 @@
 body {
-    background: blue;
+    background: rgb(249, 249, 252);
     margin: 0;
 }
 header{
-    background-color: blueviolet;
+    background-color: rgb(206, 183, 228);
     text-align: center;
 }
