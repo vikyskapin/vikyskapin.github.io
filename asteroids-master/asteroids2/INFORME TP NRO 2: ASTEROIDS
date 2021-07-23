@@ -1,0 +1,60 @@
+INFORME TP NRO 2: ASTEROIDS 
+
+El tp cuenta con archivos de codigo tomados del TP 1 modificados muy levemente como: 
+
+	caracteres.c 
+	caracteres.h
+	graficar.h
+	graficar.c 
+
+los ultimos dos fueron modificados muy poco, solo modificando los datos y leyendas que aparecen en pantalla. 
+
+De la misma manera las funciones de rotacion, calculo de velocidad y posicion instantanea se mantienen iguales al tp anterior.
+
+En lo que respecta al resto del codigo la realización del mismo se divide en varias partes.
+
+1) Generalidades: 
+
+	Todas las funciones cuyo caracter eran no especificas a una fase u objeto del programa, se agruparon en la libreria "herramientas.h"
+
+	dentro de la misma tambien se incluyeron todas las librerias del sistema utilizadas por el programa, para no llamarlas repetidamente en cada archivo especifico. 
+
+	Las librerias "lista.h" y "modulo.h" tambien cuentan con funciones genericas de especifidad baja que son utilizadas por los diferentes objetos del programa.
+
+	Para comenzar el programa al presionar la barra espaciadora utilice una variable de tipo flag que comienza en false y se cambia a true en el case de las teclas. para volver a ser false cuando la cantidad de vidas de la nave sea igual a cero. 
+	Mientras el flag este en false tambien se imprime una leyenda indicandole al usuario que debe presionar space para comenzar. 
+
+
+2) Nave: 
+	
+	El TDA "nave_t" es el unico declarado estatico, ya que es una sola la nave que se utiliza en todo el programa, por este motivo no cuenta con una funcion de destruir. 
+
+	Dentro de nave.c se encuentran las funciones que calculan posicion y angulo de la nave para ser graficada por la funcion nave_dibujar que simplemente llama a "graficador_dibujar" y pasa los datos especificos que necesita esta funcion.
+
+
+2) Asteroides: 
+
+	Los asteroides se crean en nodos y se cargan dentro de una lista de asteroides declarada en el main. 
+
+	La libreria "asteroides.h" cuenta con funciones que crean, destruyen y desplazan los asteroides, tambien una funcion que calcula su distancia a un objeto y si el mismo choco con este asteroide individual.
+
+	Estas funciones especificas del TDA asteroide devuelven un booleano que sera utilizado por las funciones de lista del TDA para realizar diferentes tareas.  
+
+	"lista_asteroide_choco" itera sobre la lista de asteroides llamando a la funcion especifica "asteroide_choco". A partir del bool que recibe como respuesta de esta ultima genera asteroides medianos,chicos o destruye asteroides, verificando con el radio del asteroide chocado.
+
+	Dentro de esta misma libreria hay una funcion que se encarga de verificar si la nave esta "a salvo" para volver a generarse, la razon por la cual la agregue en este archivo y no en nave.h fue porque dentro de esta libreria ya esta incluido el archivo nave.h y la funcion que calcula distancia, y de esta manera no tengo que incluir asteroides.h en nave.h por una sola funcion. 
+
+3) Disparos: 
+	
+	De una manera muy similar a los asteroides, los disparos se crean en nodos que son agregados a una lista inicializada en el main una vez que se presiona la tecla space. 
+
+	Los mismos dependen de la creacion de la nave por lo que solo se llama a las funciones de disparos si las funciones de nave son verificadas primero. 
+
+
+
+
+
+
+
+ 
+
