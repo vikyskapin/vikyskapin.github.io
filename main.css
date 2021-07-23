@@ -2,8 +2,11 @@ body {
     background: rgb(249, 249, 252);
     margin: 0;
 }
-header{
+h1{
     text-align: center;
+}
+#Introduccion{
+    text-align: justify;
 }
 #Fotopersonal{
     size: 10px;
