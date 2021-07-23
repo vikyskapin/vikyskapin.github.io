@@ -6,5 +6,6 @@ header{
     text-align: center;
 }
 #Fotopersonal{
-    align-items: right;
+    size: 10px;
+    object-position: left;
 }
