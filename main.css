@@ -9,6 +9,8 @@ h1{
     text-align: justify;
 }
 #Fotopersonal{
-    size: 10px;
-    object-position: left;
+    float: left;
+    margin-left: 0px 0px 0px 30px;
+    width: 150px;
+    height: 38px;
 }
