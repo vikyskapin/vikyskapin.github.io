@@ -44,7 +44,7 @@ main{
 footer{
     height: 90px;
     min-width: fit-content;
-    background-color: rgb(95, 87, 87);
+    background-color: rgb(59, 59, 59);
     margin: 0px 0px 30px 0px;
 }
 
@@ -53,6 +53,6 @@ footer{
     margin: 0px 0px 0px 0px;
     font-size: 20px;
     top: -20px;
-    color: black;
+    color: rgb(194, 194, 194);
 }
 
