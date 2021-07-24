@@ -42,7 +42,7 @@ main{
 }
 
 footer{
-    height: 90px;
+    height: 40px;
     min-width: fit-content;
     background-color: rgb(59, 59, 59);
     margin: 0px 0px 30px 0px;
